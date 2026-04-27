@@ -64,16 +64,15 @@ header {
    ========================================================================== */
 .logo, 
 a.logo,
-header.scrolled .logo,
 body.inner-page header .logo {
-    color: #001F3F !important; /* Usamos un azul marino muy oscuro y rico, similar al de 'About AMW' */
+    color: #ffffff !important;
     text-decoration: none !important; /* Confirmamos sin subrayado */
     opacity: 1 !important; /* Confirmamos sólido */
     transition: none !important; /* Sin animaciones que lo aclaren al cargar */
     
     /* Reseteamos cualquier efecto de degradado o fondo que pusimos en el hero */
     background: none !important;
-    -webkit-text-fill-color: #001F3F !important; 
+    -webkit-text-fill-color: #ffffff; 
     
     /* Estilos de fuente (se mantienen de tu código previo) */
     font-weight: 800 !important;
@@ -81,6 +80,12 @@ body.inner-page header .logo {
     text-transform: uppercase !important;
     display: inline-block !important;
     border: none !important;
+}
+
+/* Al hacer scroll, el logo cambia a AZUL OSCURO */
+header.scrolled .logo {
+    color: #001F3F !important;
+    -webkit-text-fill-color: #001F3F !important;
 }
 
 /* Bloqueo total en Hover para que no cambie a blanco ni se aclare */
