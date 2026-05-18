@@ -159,3 +159,41 @@ window.openInfoSection = function(evt, sectionName) {
         evt.currentTarget.className += " active";
     }
 };
+
+/* ==========================================================================
+   LÓGICA PARA ABRIR PESTAÑAS DESDE ENLACES EXTERNOS (URL HASH)
+   ========================================================================== */
+document.addEventListener('DOMContentLoaded', function() {
+    // Revisamos si la URL tiene un # (ej: submissions#sec-cfp)
+    if (window.location.hash) {
+        const targetId = window.location.hash.substring(1); // Quita el '#' y se queda con 'sec-cfp'
+        
+        // Buscamos si existe una sección con ese ID
+        const targetSection = document.getElementById(targetId);
+        
+        if (targetSection && targetSection.classList.contains('tab-section')) {
+            // Buscamos el botón en el menú lateral que abre esta sección
+            // Usamos un selector que busque la función onclick que contiene el ID
+            const targetButton = document.querySelector(`.side-tab-btn[onclick*="${targetId}"]`);
+            
+            if (targetButton) {
+                // Simulamos un clic en el botón para que se ejecute tu función openInfoSection
+                targetButton.click();
+                
+                // Si estás en móvil, hacemos scroll suave hacia la zona del contenido 
+                // para que el usuario no se quede atascado viendo el menú
+                if (window.innerWidth <= 768) {
+                    setTimeout(() => {
+                        const contentArea = document.querySelector('.content-area');
+                        if (contentArea) {
+                            window.scrollTo({
+                                top: contentArea.offsetTop - 100, // -100 para dejar espacio para el Header fijo
+                                behavior: 'smooth'
+                            });
+                        }
+                    }, 100);
+                }
+            }
+        }
+    }
+});
