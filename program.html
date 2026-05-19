@@ -125,30 +125,6 @@
         </div>
     </footer>
 
-    <script>
-        function openDay(evt, dayName, groupClass) {
-            var i, tabcontent, tablinks;
-            
-            var group = document.querySelector('.' + groupClass);
-            tabcontent = group.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-                tabcontent[i].classList.remove("active");
-            }
-            
-            tablinks = group.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            
-            document.getElementById(dayName).style.display = "block";
-            
-            setTimeout(function() {
-                document.getElementById(dayName).classList.add("active");
-            }, 10);
-            evt.currentTarget.className += " active";
-        }
-    </script>
     <script src="js/main.js?v=1.01"></script>
 </body>
 </html>
