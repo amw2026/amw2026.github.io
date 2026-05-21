@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Control del Header en Scroll
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 80) {
+        if (window.scrollY > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
