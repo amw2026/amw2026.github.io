@@ -661,6 +661,21 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 
 .btn-primary-hero:hover { background: var(--primary-dark); transform: translateY(-3px); }
 
+/* Píldora de Edición (Badge) */
+.hero-tag {
+    display: inline-block;
+    background: rgba(243, 156, 18, 0.1);
+    color: var(--accent-hover);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(243, 156, 18, 0.3);
+}
+
 /* ==========================================================================
    DISEÑO DE IMAGEN GEOMÉTRICO (LIMPIO Y PROFESIONAL)
    ========================================================================== */
