@@ -537,18 +537,8 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
    SECCIONES DEL INDEX
    ========================================================================== */
 
-
-
-
-
-
-
-
-
-
-
 /* ==========================================================================
-   NUEVO HERO INDEX: ALTO TOTAL Y DISEÑO GEOMÉTRICO (SIN CÍRCULOS)
+   HERO INDEX
    ========================================================================== */
 .hero-new {
     height: 100vh !important; /* Fuerza el alto total de la pantalla */
@@ -671,7 +661,37 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    opacity: 0.5;
+    opacity: 0.6;
+    z-index: 10; /* Aseguramos que esté por encima de todo el hero */
+}
+
+/* Dibujo del borde del ratón */
+.mouse {
+    width: 26px;
+    height: 40px;
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    position: relative;
+}
+
+/* Dibujo de la ruedita que baja */
+.mouse::before {
+    content: '';
+    width: 4px; 
+    height: 8px;
+    background: var(--accent);
+    position: absolute;
+    left: 50%; 
+    top: 8px;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    animation: scroll 2s infinite; /* Llama a la animación */
+}
+
+/* Animación de la ruedita */
+@keyframes scroll {
+    0% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(15px); }
 }
 
 /* ==========================================================================
