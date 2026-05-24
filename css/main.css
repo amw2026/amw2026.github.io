@@ -765,13 +765,8 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
     .scroll-indicator { display: none !important; }
 }
 
-
-
-
-
-
 /* ==========================================================================
-   SECCIÓN: WELCOME (DISEÑO EDITORIAL SIN CAJAS)
+   SECCIÓN: WELCOME
    ========================================================================== */
 .welcome-section {
     padding: 8rem 0;
