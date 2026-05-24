@@ -664,14 +664,14 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 /* Indicador de Scroll */
 .scroll-indicator {
     position: absolute;
-    bottom: 30px;
+    bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    opacity: 0.6;
+    gap: 8px;
+    opacity: 0.5;
 }
 
 /* ==========================================================================
@@ -730,19 +730,6 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
     transform: scale(1.05); /* Efecto zoom suave */
 }
 
-/* Indicador de Scroll */
-.scroll-indicator {
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    opacity: 0.5;
-}
-
 /* Móvil */
 @media (max-width: 992px) {
     .hero-new { 
@@ -755,6 +742,7 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
     .hero-text p { margin: 0 auto 2rem; }
     .hero-dates, .hero-btns { justify-content: center; }
     .hero-visual { display: none !important; }
+    .scroll-indicator { display: none !important; }
 }
 
 
