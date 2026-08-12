@@ -24,32 +24,43 @@
             <span class="bar"></span>
         </button>
     
-        <a href="../index" class="logo">AMW 2026</a>
+        <a href="index" class="logo">AMW 2026</a>
         
         <nav id="nav-container">
             <ul class="nav-links" id="nav-links">
-                <li><a href="../news">News</a></li>
-                <li><a href="../info">Information</a></li>
-                <li><a href="../keynotes">Keynotes</a></li>
+                <li><a href="news">News</a></li>
+                <li><a href="info">Information</a></li>
+                <li><a href="keynotes">Keynotes</a></li>
                 
                 <li class="dropdown">
                     <a href="javascript:void(0);" class="dropdown-toggle">Program ▾</a>
                     <ul class="dropdown-menu">
-                        <li><a href="../program">Conference Program</a></li>
-                        <li><a href="../accepted-papers">Accepted Papers</a></li>
+                        <li><a href="program">Conference Program</a></li>
+                        <li><a href="accepted-papers">Accepted Papers</a></li>
                     </ul>
                 </li>
 
-                <li><a href="../submissions">Submissions</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle">AMW School ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-about">About</a></li>
+                        <li><a href="school-speakers">Speakers</a></li>
+                        <li><a href="school-program">Program</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="submissions">Submissions</a></li>
                 
                 <li class="dropdown">
                     <a href="javascript:void(0);" class="dropdown-toggle">Participation Info ▾</a>
                     <ul class="dropdown-menu">
-                        <li><a href="../venue">Venue & Travel</a></li>
-                        <li><a href="../registration">Registration</a></li>
+                        <li><a href="venue">Venue</a></li>
+                        <li><a href="travel">Travel</a></li>
+                        <li><a href="registration">Registration</a></li>
                     </ul>
                 </li>
-                <li><a href="../grants">Grants Program</a></li>
+                
+                <li><a href="grants">Grants Program</a></li>
             </ul>
         </nav>
     </header>
@@ -86,9 +97,13 @@
                     
                     <section class="talk-details">
                         <h2 class="section-title-left">Research Focus</h2>
-                        <h3 class="talk-title">"Data Intensive Computing and Graph Databases"</h3>
+                        <h3 class="talk-title">"Future Query Languages"</h3>
                         <div class="editorial-text-block">
-                            <p><strong>Abstract:</strong> Dr. Martens' research lies deeply in data management, with a strong current focus on query language design and graph databases. He intricately combines these areas with logic, complexity, and formal language theory. One of his primary scientific goals is to find an optimal balance that makes programming with data highly efficient, precise, intuitive, and easy for developers and researchers alike.</p>
+                            <p><strong>Abstract:</strong> Database query languages are perhaps the greatest success story of declarative programming languages. By separating intent from execution, declarative languages allow agents or programmers to focus on getting the correct results instead of writing efficient programs to obtain them. However, today’s query languages are data sublanguages: they focus on storage and retrieval of data from databases.
+
+The aim of this talk is to explore how query languages can evolve into full-fledged programming languages, which is in line with Jim Gray’s dream of automatic programming. This talk has two main goals. First, I want to draw our attention to the goal of automatic programming, i.e., expanding the scope of query languages to full-fledges programming languages. Second, I will argue how we need to revisit some basic principles of query languages if we want to achieve this goal, notably nulls and bag semantics.
+
+My story will be interleaved with some design aspects of Rel, which is an example of how database principles can be used to expand the scope of query languages beyond the sublanguage paradigm. Rel is a language that was developed at RelationalAI and to whose design I contributed.</p>
                         </div>
                     </section>
 
