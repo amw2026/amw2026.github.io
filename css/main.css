@@ -1781,13 +1781,19 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 
 /* Grillas responsivas */
 .tier-grid {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 4rem 2rem;
-    justify-items: center; 
 }
 
-.grid-large { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-.grid-medium { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.grid-large .speaker-portrait {
+    flex: 0 1 280px;
+}
+
+.grid-medium .speaker-portrait {
+    flex: 0 1 220px;
+}
 
 /* El Retrato Flotante */
 .speaker-portrait {
