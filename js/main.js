@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault(); // Bloquea redirecciones
             e.stopPropagation(); // Evita clics accidentales debajo del menú
 
-            if (window.innerWidth <= 1049) {
+            if (window.innerWidth <= 1054) {
                 // Selecciona el submenú específico que está justo debajo de ESTE botón
                 const dropdownMenu = this.nextElementSibling;
                 
