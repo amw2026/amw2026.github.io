@@ -200,7 +200,7 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 /* ==========================================================================
    VERSIÓN ESCRITORIO (Solo funciona pasando el ratón)
    ========================================================================== */
-@media (min-width: 1055px) {
+@media (min-width: 1056px) {
     .dropdown-menu {
         position: absolute;
         top: 100%;
@@ -251,7 +251,7 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 /* ==========================================================================
    VERSIÓN MÓVIL (TARJETA FLOTANTE - UX/UI MEJORADO)
    ========================================================================== */
-@media (max-width: 1054px) {
+@media (max-width: 1055px) {
     .dropdown {
         position: relative;
         width: 100%;
@@ -1320,7 +1320,7 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 /* ==========================================================================
    RESPONSIVE MÓVIL (MENU Y DISEÑO)
    ========================================================================== */
-@media (max-width: 1054px) {
+@media (max-width: 1055px) {
     header {
         justify-content: flex-start;
         gap: 20px;
