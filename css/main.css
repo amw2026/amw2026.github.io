@@ -2632,7 +2632,7 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
     margin-top: 3rem;
 }
 
-.price-card {
+.pricing-grid .price-card {
     flex: 0 1 280px;
 }
 
