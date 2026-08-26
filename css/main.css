@@ -154,7 +154,7 @@ header.scrolled .bar {
 }
 
 /* Salto de linea solo para PC */
-@media (max-width: 1056px) {
+@media (max-width: 993px) {
     .only-desktop {
         display: none;
     }
