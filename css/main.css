@@ -1313,7 +1313,7 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 /* ==========================================================================
    RESPONSIVE MÓVIL (MENU Y DISEÑO)
    ========================================================================== */
-@media (max-width: 1050px) {
+@media (max-width: 992px) {
     header {
         justify-content: flex-start;
         gap: 20px;
