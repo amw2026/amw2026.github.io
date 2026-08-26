@@ -58,6 +58,12 @@ header {
     display: none; 
 }
 
+@media (max-width: 1050px) {
+    .menu-toggle {
+        display: flex;
+    }
+}
+
 
 
 /* ==========================================================================
@@ -200,7 +206,7 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 /* ==========================================================================
    VERSIÓN ESCRITORIO (Solo funciona pasando el ratón)
    ========================================================================== */
-@media (min-width: 1056px) {
+@media (min-width: 1051px) {
     .dropdown-menu {
         position: absolute;
         top: 100%;
@@ -251,7 +257,7 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 /* ==========================================================================
    VERSIÓN MÓVIL (TARJETA FLOTANTE - UX/UI MEJORADO)
    ========================================================================== */
-@media (max-width: 1055px) {
+@media (max-width: 1050px) {
     .dropdown {
         position: relative;
         width: 100%;
