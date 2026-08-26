@@ -2625,10 +2625,15 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
    PÁGINA: REGISTRATION (MODERN PRICING CARDS)
    ========================================================================== */
 .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     margin-top: 3rem;
+}
+
+.pricing-grid .price-card {
+    flex: 0 1 280px;
 }
 
 .price-card {
