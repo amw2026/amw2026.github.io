@@ -1710,6 +1710,48 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
     }
 }
 
+/* --- ESTILOS PARA LA SECCIÓN DE SPONSORS Y HOSTS --- */
+/* Contenedor principal de los logos (reemplaza el div con estilos en línea) */
+.logo-container {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Espaciado para separar la sección de Host de la de Sponsors */
+.subsection-spacing {
+    margin-top: 4rem; 
+}
+
+/* Estilos de las imágenes de los logos */
+.sponsor-logo img {
+    max-height: 80px;
+    width: auto;
+    display: block;
+}
+
+/* Efecto hover opcional para que los logos se vean más interactivos */
+.sponsor-logo a {
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.sponsor-logo a:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+/* Texto de "To Be Announced..." */
+.tba-text {
+    margin-top: 2.5rem;
+    font-weight: 700;
+    color: var(--primary); /* Asegúrate de tener definida esta variable en tu :root, o cámbiala por un color hex/rgb */
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
 
 
