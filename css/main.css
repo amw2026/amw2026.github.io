@@ -1725,10 +1725,16 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
     margin-top: 4rem; 
 }
 
+.sponsor-logo {
+    max-width: 100%; 
+}
+
 /* Estilos de las imágenes de los logos */
 .sponsor-logo img {
     max-height: 80px;
+    max-width: 100%;
     width: auto;
+   object-fit: contain;
     display: block;
 }
 
@@ -1743,14 +1749,11 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
     opacity: 0.8;
 }
 
-/* Texto de "To Be Announced..." */
-.tba-text {
-    margin-top: 2.5rem;
-    font-weight: 700;
-    color: var(--primary); /* Asegúrate de tener definida esta variable en tu :root, o cámbiala por un color hex/rgb */
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+@media (max-width: 768px) {
+    .logo-container {
+        justify-content: center; /* Centra los logos en pantallas pequeñas */
+        gap: 2rem; /* Reduce un poco el espacio entre logos en móviles */
+    }
 }
 
 
