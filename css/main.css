@@ -827,73 +827,97 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 
 
 /* ============================================
-   REGISTRATION CALL TO ACTION
+   REGISTRATION CTA
    ============================================ */
 
 .registration-cta {
+    position: relative;
     padding: 5rem 0;
-    background: var(--primary);
-    color: var(--white);
+    background: #001F3F;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.registration-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(
+        circle at 20% 50%,
+        rgba(255, 255, 255, 0.08) 1px,
+        transparent 1px
+    );
+    background-size: 28px 28px;
+    pointer-events: none;
 }
 
 .registration-cta-content {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 4rem;
-    max-width: 1100px;
-    margin: 0 auto;
+    gap: 3rem;
 }
 
 .registration-cta-text {
-    max-width: 700px;
+    max-width: 720px;
 }
 
 .registration-cta-label {
     display: inline-block;
     margin-bottom: 0.8rem;
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    opacity: 0.75;
+    opacity: 0.7;
 }
 
 .registration-cta h2 {
     margin: 0 0 1rem;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    line-height: 1.15;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    color: #ffffff;
 }
 
-.registration-cta p {
+.registration-cta-text p {
     margin: 0;
     max-width: 680px;
     font-size: 1.05rem;
-    line-height: 1.75;
-    opacity: 0.9;
+    line-height: 1.7;
+    opacity: 0.88;
+}
+
+.registration-cta-date {
+    margin-top: 1rem !important;
+    font-size: 0.9rem !important;
+    font-weight: 600;
+    opacity: 0.7 !important;
 }
 
 .registration-cta-action {
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-shrink: 0;
+    gap: 0.8rem;
 }
 
 .btn-registration {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
+    gap: 1rem;
     min-width: 190px;
-    padding: 1rem 1.5rem;
-    background: var(--white);
-    color: var(--primary);
-    border-radius: 6px;
+    padding: 1rem 1.7rem;
+    background: #ffffff;
+    color: #001F3F;
+    text-decoration: none;
     font-size: 0.95rem;
     font-weight: 700;
-    text-decoration: none;
-    transition: var(--transition);
+    border-radius: 4px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-registration span {
@@ -903,6 +927,7 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 
 .btn-registration:hover {
     transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .btn-registration:hover span {
@@ -910,12 +935,11 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 }
 
 .registration-cta-note {
-    margin-top: 0.9rem;
     font-size: 0.78rem;
-    text-align: center;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     .registration-cta {
         padding: 4rem 0;
@@ -923,25 +947,19 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 
     .registration-cta-content {
         flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
         gap: 2rem;
-        text-align: center;
-    }
-
-    .registration-cta-text {
-        max-width: 600px;
-    }
-
-    .registration-cta p {
-        font-size: 1rem;
     }
 
     .registration-cta-action {
+        align-items: flex-start;
         width: 100%;
     }
 
     .btn-registration {
         width: 100%;
-        max-width: 240px;
+        max-width: 280px;
     }
 }
 
