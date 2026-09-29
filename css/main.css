@@ -826,6 +826,126 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 }
 
 
+/* ============================================
+   REGISTRATION CALL TO ACTION
+   ============================================ */
+
+.registration-cta {
+    padding: 5rem 0;
+    background: var(--primary);
+    color: var(--white);
+}
+
+.registration-cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.registration-cta-text {
+    max-width: 700px;
+}
+
+.registration-cta-label {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+.registration-cta h2 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.15;
+}
+
+.registration-cta p {
+    margin: 0;
+    max-width: 680px;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    opacity: 0.9;
+}
+
+.registration-cta-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.btn-registration {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    min-width: 190px;
+    padding: 1rem 1.5rem;
+    background: var(--white);
+    color: var(--primary);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-registration span {
+    font-size: 1.2rem;
+    transition: transform 0.25s ease;
+}
+
+.btn-registration:hover {
+    transform: translateY(-3px);
+}
+
+.btn-registration:hover span {
+    transform: translateX(4px);
+}
+
+.registration-cta-note {
+    margin-top: 0.9rem;
+    font-size: 0.78rem;
+    text-align: center;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .registration-cta {
+        padding: 4rem 0;
+    }
+
+    .registration-cta-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .registration-cta-text {
+        max-width: 600px;
+    }
+
+    .registration-cta p {
+        font-size: 1rem;
+    }
+
+    .registration-cta-action {
+        width: 100%;
+    }
+
+    .btn-registration {
+        width: 100%;
+        max-width: 240px;
+    }
+}
+
+
 /* ==========================================================================
    SECCIÓN: WELCOME
    ========================================================================== */
