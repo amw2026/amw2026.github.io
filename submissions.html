@@ -81,9 +81,9 @@
                 <button class="side-tab-btn active" onclick="openInfoSection(event, 'sec-dates')">Important Dates</button>
                 <button class="side-tab-btn" onclick="openInfoSection(event, 'sec-cfp')">Call for Papers</button>
                 <button class="side-tab-btn" onclick="openInfoSection(event, 'sec-submit')">Submission Rules</button>
+                <button class="side-tab-btn" onclick="openInfoSection(event, 'sec-camera')">Camera-Ready</button>
                 <button class="side-tab-btn" onclick="window.open('https://easychair.org/conferences/?conf=amw2026', '_blank')">Submit Paper</button>
                 <button class="side-tab-btn" onclick="window.open('https://forms.gle/XjsiddoE2zTahkYq9', '_blank')">Summer School</button>
-                <!--<button class="side-tab-btn" onclick="openInfoSection(event, 'sec-camera')">Camera-Ready Guidelines</button>-->
             </aside>
 
             <div class="content-area">
@@ -93,7 +93,7 @@
                     <div class="dates-list-editorial">
                         <div class="date-row">
                             <span class="label">Paper Submission</span>
-                            <span class="value updated">July 31th, 2026</span>
+                            <span class="value updated">July 31st, 2026</span>
                         </div>
                         <div class="date-row">
                             <span class="label">Notifications</span>
@@ -101,7 +101,7 @@
                         </div>
                         <div class="date-row">
                             <span class="label">Camera-ready</span>
-                            <span class="value updated">October 1st, 2026</span>
+                            <span class="value updated">October 30th, 2026</span>
                         </div>
                     </div>
                     
@@ -133,6 +133,7 @@
                             <li>Database benchmarking</li>
                             <li>Database concurrency and transactions</li>
                         </ul>
+
                         <ul class="tpc-list">
                             <li>Database storage and indexing</li>
                             <li>Distributed and parallel databases</li>
@@ -169,71 +170,210 @@
 
                     <div class="editorial-text-block">
                         <p>We invite two types of submissions:</p>
+
                         <ul class="bullet-list">
-                            <li><strong>Short papers</strong> of up to 5 pages that may contain either original ongoing research or recently published results. In case of papers presenting recently published results, these should have an explicit “[Recent Work]” suffix in the title. Papers accepted in the Recent Work category will not be published in the workshop proceedings.</li>
-                            <li><strong>Regular papers</strong> of up to 10 pages, presenting original research.</li>
+                            <li>
+                                <strong>Short papers</strong> of up to <strong>6 pages plus references</strong> that may contain either original ongoing research or recently published results. In case of papers presenting recently published results, these should have an explicit “[Recent Work]” suffix in the title. Papers accepted in the Recent Work category will not be published in the workshop proceedings.
+                            </li>
+
+                            <li>
+                                <strong>Regular papers</strong> of up to <strong>12 pages plus references</strong>, presenting original research.
+                            </li>
                         </ul>
-                        <p>Original papers will be published under CEUR Workshop Proceedings. </p>
-                        <p>Papers should be written in English and must be formatted according to the <strong>single-column</strong> <a href="https://ceur-ws.org/HOWTOSUBMIT.html#CEURART">CEURART style</a> and submitted electronically via EasyChair (link available on the conference website) in PDF format. The submissions will be judged by the Program Committee for scientific quality and relevance. At least one author of each accepted paper is required to attend the workshop to present the work. In case of papers presenting original work the authors can choose to opt-out from their paper being published in the workshop proceedings.</p>
+
+                        <p>Original papers will be published under CEUR Workshop Proceedings.</p>
+
+                        <p>
+                            Papers should be written in English and must be formatted according to the
+                            <strong>single-column</strong>
+                            <a href="https://ceur-ws.org/HOWTOSUBMIT.html#CEURART">CEURART style</a>
+                            and submitted electronically via EasyChair in PDF format. The submissions will be judged by the Program Committee for scientific quality and relevance.
+                        </p>
+
+                        <p>
+                            At least one author of each accepted paper is required to attend the workshop to present the work. In case of papers presenting original work the authors can choose to opt-out from their paper being published in the workshop proceedings.
+                        </p>
+
                         <p>Submissions must be uploaded in PDF format using the following link:</p>
-                        <p><a href="https://easychair.org/conferences/?conf=amw2026">EasyChair</a></p>
+
+                        <p>
+                            <a href="https://easychair.org/conferences/?conf=amw2026">EasyChair</a>
+                        </p>
                     </div>
                 </section>
 
-                <!--<section id="sec-camera" class="info-section tab-section">
-                    <h2 class="section-title-left">Camera-Ready Guidelines</h2>
+
+                <section id="sec-camera" class="info-section tab-section">
+                    <h2 class="section-title-left">Camera-Ready</h2>
+
+                    <div class="editorial-text-block">
+                        <p>
+                            Dear authors, below follow instructions for the preparation of the final version of your paper that is to appear in the AMW 2026 workshop proceedings. Please read the instructions carefully and adhere to the formatting guidelines.
+                        </p>
+
+                        <h3 class="subsection-title">Updated Page Limits</h3>
+
+                        <ul class="bullet-list">
+                            <li><strong>Regular papers:</strong> 12 pages plus references.</li>
+                            <li><strong>Short papers:</strong> 6 pages plus references.</li>
+                        </ul>
+
+                        <p>
+                            Camera-ready files must be uploaded using the following Google Form:
+                        </p>
+
+                        <p>
+                            <a href="https://forms.gle/CRMQXD2MCvbii5Xq5" target="_blank" rel="noopener noreferrer">
+                                Camera-Ready Submission Form
+                            </a>
+                        </p>
+                    </div>
+
+
                     <div class="guidelines-numbered">
                         <ol>
-                            <li>Follow the <strong>single-column </strong><a href="https://ceur-ws.org/HOWTOSUBMIT.html#CEURART">CEURART Style</a>.</li>
-                            <li>Complete and sign the <a href="https://ceur-ws.org/HOWTOSUBMIT.html#AUTHORAGREEMENT">Author Agreement Form</a>.
+                            <li>
+                                Follow the <strong>single-column</strong>
+                                <a href="https://ceur-ws.org/HOWTOSUBMIT.html#CEURART">CEURART Style</a>.
                                 <ul>
-                                    <li>Fill in <em>Gabriela Montoya, Emanuel Sallinger, and Genoveva Vargas-Solar</em> as <strong>Editors of the proceedings</strong>.</li>
+                                    <li>
+                                        The CEURART style is also available on
+                                        <a href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/wqyfdgftmcfw" target="_blank" rel="noopener noreferrer">
+                                            Overleaf
+                                        </a>.
+                                    </li>
                                 </ul>
                             </li>
-                            <li>Use the <strong>emphasizing capitalized style</strong> for your paper title.
+
+                            <li>
+                                Complete and sign the
+                                <a href="https://ceur-ws.org/HOWTOSUBMIT.html#AUTHORAGREEMENT">Author Agreement Form</a>.
                                 <ul>
-                                    <li>CEUR instructions references <a href="https://wiki.musicbrainz.org/Style/Language/English">Language/English hints</a> for how to correctly use this style.</li>
+                                    <li>
+                                        Fill in <em>Maribel Acosta, Domagoj Vrgoč, Regina Ticona Herrera, Renzo Angles, Ivan Sipiran</em> as <strong>Editors of the proceedings</strong>.
+                                    </li>
+                                    <li>
+                                        Fill in <em>AMW 2026: 17th Alberto Mendelzon International Workshop on Foundations of Data Management, 2026</em> as <strong>Name and year of the event</strong>.
+                                    </li>
                                 </ul>
                             </li>
-                            <li>Choose the author agreement form that corresponds to your paper:
+
+                            <li>
+                                Use the <strong>emphasizing capitalized style</strong> for your paper title.
                                 <ul>
-                                    <li><strong>AUTHOR-AGREEMENT (NTP)</strong> if your paper includes "no copyrighted third party material and no material in the paper was produced with the help of Generative Artificial Intelligence tools".</li>
-                                    <li><strong>AUTHOR-AGREEMENT (TP)</strong> if your paper includes "copyrighted third party material or includes material produced with the help of Generative Artificial Intelligence tools".</li>
+                                    <li>
+                                        CEUR instructions reference
+                                        <a href="https://wiki.musicbrainz.org/Style/Language/English">
+                                            Language/English hints
+                                        </a>
+                                        for how to correctly use this style.
+                                    </li>
                                 </ul>
                             </li>
-                            <li>For papers including copyrighted third party material, append a copy of the permission(s) by the third parties to use this material to the signed author agreement.</li>
-                            <li>For papers including material produced with the help of Generative Artificial Intelligence tools, fill in and <a href="https://ceur-ws.org/ceur-author-statement-AI-material.pdf?ver=2024-06-04">sign a declaration</a> on which elements were produced by AI tools.
+
+                            <li>
+                                Choose the author agreement form that corresponds to your paper:
                                 <ul>
-                                    <li>Please notice that <strong>substantial</strong> use of AI is not acceptable (<a href="https://ceur-ws.org/ACADEMIC-ETHICS.html?ver=2024-06-04">Academic Ethics</a>).</li>
+                                    <li>
+                                        <strong>AUTHOR-AGREEMENT (NTP)</strong> if your paper includes
+                                        “no copyrighted third party material and no material in the paper was produced with the help of Generative Artificial Intelligence tools”.
+                                    </li>
+                                    <li>
+                                        <strong>AUTHOR-AGREEMENT (TP)</strong> if your paper includes
+                                        “copyrighted third party material” or includes material produced with the help of Generative Artificial Intelligence tools.
+                                    </li>
                                 </ul>
                             </li>
-                            <li>The <strong>author agreement</strong> and eventual <strong>permissions and declarations</strong> appended to the agreement <strong>must be physically signed with an ink pen on paper and scanned</strong>.
+
+                            <li>
+                                For papers including copyrighted third party material, append a copy of the permission(s) by the third parties to use this material to the signed author agreement.
+                            </li>
+
+                            <li>
+                                All papers must include a <strong>Declaration on Generative AI</strong> in the designated section available in the proceedings template.
                                 <ul>
-                                    <li>To comply with <a href="https://ceur-ws.org/HOWTOSUBMIT.html#FAQ-HAND-SIGNATURE">CEUR-WS hand-signature FAQ</a>.</li>
+                                    <li>
+                                        Please notice that <strong>substantial</strong> use of AI is not acceptable
+                                        (<a href="https://ceur-ws.org/GenAI/Policy.html?ver=2025-01-01">CEUR-WS Generative AI Policy</a>).
+                                    </li>
                                 </ul>
                             </li>
-                            <li>Provide the <strong>author agreement</strong> and eventual <strong>permissions and declarations</strong> appended to the agreement as a <strong>PDF file of at most 1MB</strong>.</li>
-                            <li><strong>Make sure that the authors' names and affiliations are correct</strong>.</li>
-                            <li><strong>Keep the copyright clause</strong> as in the template.
-                                <p class="small-text">*Copyright for this paper by its authors. Use permitted under Creative Commons License Attribution 4.0 International (CC BY 4.0).</p>
+
+                            <li>
+                                The <strong>author agreement</strong> and eventual <strong>permissions and declarations</strong> appended to the agreement
+                                <strong>must be physically signed with an ink pen on paper and scanned</strong>.
+                                <ul>
+                                    <li>
+                                        To comply with the
+                                        <a href="https://ceur-ws.org/HOWTOSUBMIT.html#FAQ-HAND-SIGNATURE">
+                                            CEUR-WS hand-signature FAQ
+                                        </a>.
+                                    </li>
+                                </ul>
                             </li>
-                            <li><strong>Update copyright year</strong> to "2026".</li>
-                            <li><strong>Update conference</strong> to:
-                                <p class="small-text">"AMW 2026: 17th Alberto Mendelzon International Workshop on Foundations of Databases and the Web, November 9th–13th, 2026, Arequipa, Peru"</p>
+
+                            <li>
+                                Provide the <strong>author agreement</strong> and eventual <strong>permissions and declarations</strong> appended to the agreement as a <strong>PDF file of at most 1MB</strong>.
                             </li>
-                            <li>The paper <strong>must not include page numbers</strong>.</li>
+
+                            <li>
+                                <strong>Make sure that the authors' names and affiliations are correct.</strong>
+                            </li>
+
+                            <li>
+                                <strong>Keep the copyright clause</strong> as in the template.
+                                <p class="small-text">
+                                    *Copyright for this paper by its authors. Use permitted under Creative Commons License Attribution 4.0 International (CC BY 4.0).
+                                </p>
+                            </li>
+
+                            <li>
+                                <strong>Update copyright year</strong> to “2026”.
+                            </li>
+
+                            <li>
+                                <strong>Update conference</strong> to:
+                                <p class="small-text">
+                                    “AMW 2026: 17th Alberto Mendelzon International Workshop on Foundations of Data Management, November 9th–November 13th, 2026, Arequipa, Peru”
+                                </p>
+                            </li>
+
+                            <li>
+                                The paper <strong>must not include page numbers</strong>.
+                            </li>
                         </ol>
                     </div>
 
+
                     <div class="editorial-text-block" style="margin-top: 3rem;">
-                        <p>Your camera ready submission must be completed by <strong>October 1st, 2026</strong> and include the following files:</p>
+                        <p>
+                            Your camera-ready submission must be completed by <strong>October 30th, 2026</strong> and include the following files:
+                        </p>
+
                         <ul class="bullet-list-pink">
-                            <li>AuthorAgreementPaperXXXX.pdf (a PDF file of at most 1MB that includes eventual permissions for copyrighted third party material and AI declaration)</li>
-                            <li>paperXXXX.pdf</li>
-                            <li>paperXXXX.zip (including all the source files to generate paperXXXX.pdf)</li>
+                            <li>
+                                <strong>AuthorAgreementPaperXXXX.pdf</strong> — a PDF file of at most 1MB that includes eventual permissions for copyrighted third party material.
+                            </li>
+                            <li>
+                                <strong>paperXXXX.pdf</strong> — the final camera-ready paper, including the Declaration on Generative AI section.
+                            </li>
+                            <li>
+                                <strong>paperXXXX.zip</strong> — including all the source files required to generate paperXXXX.pdf.
+                            </li>
                         </ul>
                     </div>
-                </section>-->
+
+
+                    <div class="info-callout blue" style="margin-top: 2rem;">
+                        <p>
+                            <strong>Camera-Ready Submission Form:</strong>
+                            <a href="https://forms.gle/CRMQXD2MCvbii5Xq5" target="_blank" rel="noopener noreferrer">
+                                Upload your files through the Google Form
+                            </a>.
+                        </p>
+                    </div>
+
+                </section>
 
             </div>
         </div>
@@ -247,6 +387,7 @@
                 <p>17th Alberto Mendelzon International Workshop on Foundations of Databases and the Web.</p>
                 <p>Organized by Universidad Católica San Pablo.</p>
             </div>
+
             <div class="footer-col links">
                 <h4>Quick Links</h4>
                 <ul>
@@ -256,11 +397,13 @@
                     <li><a href="registration">Registration</a></li>
                 </ul>
             </div>
+
             <div class="footer-col contact">
                 <h4>Contact Info</h4>
                 <p><i class="icon-location"></i> Quinta Vivanco s/n, Urb. Campiña Paisajista, Arequipa - Perú</p>
                 <p><i class="icon-email"></i> rticona&#64;ucsp&#46;edu&#46;pe</p>
             </div>
+
             <div class="footer-col social">
                 <h4>Follow Us</h4>
                 <div class="social-icons">
@@ -270,12 +413,14 @@
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom">
             <div class="container">
                 <p>&copy; 2026 Alberto Mendelzon Workshop. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+
     <script src="js/main.js?v=1.01"></script>
 </body>
 </html>
