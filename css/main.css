@@ -3024,96 +3024,109 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 }
 
 /* ==========================================================================
-   Registration Form CTA (registration.html)
+   Registration Process Steps (registration.html)
    ========================================================================== */
-.registration-form-cta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(135deg, rgba(0, 51, 102, 0.03) 0%, rgba(0, 51, 102, 0.08) 100%);
+
+.registration-process {
+    margin: 2.5rem 0 4rem 0;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+    .process-steps {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.step-box {
+    background-color: #f8fafc; /* Gris azulado muy suave y limpio */
+    padding: 2.5rem;
     border-radius: 12px;
-    padding: 2.2rem 3rem;
-    margin: 2.5rem 0 3.5rem 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-    border-left: 6px solid var(--primary); /* Asegura que tu variable primaria esté azul oscuro */
-    gap: 2rem;
-    transition: transform 0.3s ease;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.registration-form-cta:hover {
+.step-box:hover {
     transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
 }
 
-.cta-content-group {
-    flex: 1;
+/* Paso 2: Formulario Obligatorio (Llamativo, elegante, sin bordes) */
+.step-box.highlight-step {
+    background-color: var(--primary-dark, #0f172a);
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-.cta-content-group h3 {
-    color: var(--primary-dark, #002244);
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
+.step-number {
+    background-color: var(--accent, #ff4d4d);
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    flex-shrink: 0;
 }
 
-.cta-content-group h3 i {
-    color: var(--accent); /* Un color llamativo, idealmente rojo o dorado de tu paleta */
+.step-content h4 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    color: inherit;
+    font-weight: 700;
 }
 
-.cta-content-group p {
-    color: var(--text-main, #333);
-    margin: 0;
-    font-size: 1.05rem;
+.step-box:not(.highlight-step) .step-content h4 {
+    color: var(--primary, #1e293b);
+}
+
+.step-content p {
+    margin: 0 0 1.5rem 0;
+    font-size: 1rem;
     line-height: 1.6;
+    opacity: 0.9;
 }
 
-.cta-content-group p strong {
+.pdf-link {
+    font-weight: 700;
+    color: var(--accent, #ff4d4d);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s ease;
+}
+
+.pdf-link:hover {
     color: var(--primary);
 }
 
-.btn-verify {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background-color: var(--primary);
-    color: var(--white);
-    padding: 1.2rem 2.5rem;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1.05rem;
+/* Botón elegante dentro del recuadro oscuro */
+.btn-form {
+    display: inline-block;
+    background-color: var(--accent, #ff4d4d);
+    color: #ffffff !important;
+    padding: 0.8rem 1.8rem;
     text-decoration: none;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    box-shadow: 0 4px 15px rgba(0, 51, 102, 0.2);
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.btn-verify:hover {
-    background-color: var(--accent);
-    color: var(--white);
+.btn-form:hover {
+    background-color: #e63946;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsividad para móviles */
-@media (max-width: 768px) {
-    .registration-form-cta {
-        flex-direction: column;
-        text-align: center;
-        padding: 1.8rem;
-        gap: 1.5rem;
-        border-left: none;
-        border-top: 6px solid var(--primary);
-    }
-
-    .cta-content-group h3 {
-        justify-content: center;
-    }
-
-    .btn-verify {
-        width: 100%;
-    }
 }
 
 
