@@ -2630,6 +2630,7 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 
 
 
+
 /* ==========================================================================
    PÁGINA: PROGRAM
    ========================================================================== */
@@ -2799,6 +2800,8 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
     white-space: nowrap;
 }
 
+/* CÍRCULOS DE LA LÍNEA DE TIEMPO: SE CONSERVAN */
+
 .program-time::after {
     content: "";
     position: absolute;
@@ -2813,6 +2816,7 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 }
 
 .program-item-content {
+    position: relative;
     min-width: 0;
     padding: 1.4rem 1.7rem;
     background: #ffffff;
@@ -2883,11 +2887,43 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
     line-height: 1.6;
 }
 
+/* ==========================================================================
+   NUEVO DISEÑO DE ACENTOS LATERALES
+   Se reemplazan las franjas sólidas por segmentos verticales separados.
+   ========================================================================== */
+
+.program-keynote .program-item-content,
+.program-activity .program-item-content,
+.program-general .program-item-content {
+    border-left: 1px solid rgba(0, 51, 102, 0.08);
+}
+
+/* Acento segmentado común */
+
+.program-keynote .program-item-content::before,
+.program-activity .program-item-content::before,
+.program-general .program-item-content::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 16px;
+    bottom: 16px;
+    width: 4px;
+    border-radius: 10px;
+    background: repeating-linear-gradient(
+        to bottom,
+        var(--program-accent) 0,
+        var(--program-accent) 13px,
+        transparent 13px,
+        transparent 21px
+    );
+}
+
 /* KEYNOTE */
 
 .program-keynote .program-item-content {
+    --program-accent: var(--primary);
     background: #f1f6fb;
-    border-left: 4px solid var(--primary);
 }
 
 .program-keynote .program-time::after {
@@ -2929,12 +2965,12 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 /* ACTIVITIES */
 
 .program-activity .program-item-content {
+    --program-accent: #b18a50;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 0.7rem 1rem;
     background: #fbfaf7;
-    border-left: 4px solid #b18a50;
 }
 
 .program-activity .program-item-content > i {
@@ -2954,7 +2990,7 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 /* GENERAL EVENTS */
 
 .program-general .program-item-content {
-    border-left: 4px solid #7189a3;
+    --program-accent: #7189a3;
 }
 
 /* FOOTER NOTE */
@@ -3079,6 +3115,17 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
     .program-paper p {
         font-size: 0.82rem;
     }
+
+    /* Ajuste del acento segmentado en móvil */
+
+    .program-keynote .program-item-content::before,
+    .program-activity .program-item-content::before,
+    .program-general .program-item-content::before {
+        left: 8px;
+        top: 14px;
+        bottom: 14px;
+        width: 3px;
+    }
 }
 
 @media (max-width: 420px) {
@@ -3108,6 +3155,7 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
         padding: 1rem;
     }
 }
+
 
 
 
