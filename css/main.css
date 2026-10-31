@@ -2631,118 +2631,484 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 
 
 /* ==========================================================================
-   PÁGINA: PROGRAM (DISEÑO DE LÍNEA DE TIEMPO)
+   PÁGINA: PROGRAM
    ========================================================================== */
 
-/* Navegación de pestañas */
-.program-tabs {
+.program-intro {
+    max-width: 850px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.program-intro > p {
+    color: var(--text-main);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.program-venue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.program-venue i {
+    color: var(--accent);
+}
+
+.venue-separator {
+    opacity: 0.35;
+}
+
+/* DAY NAVIGATION */
+
+.program-day-nav {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 4rem;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    margin: 3rem auto 4rem;
+    flex-wrap: wrap;
 }
 
-.tab-btn {
-    background: transparent;
-    border: none;
-    padding: 1rem 1.5rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--text-main);
-    cursor: pointer;
-    transition: var(--transition);
-    position: relative;
-    opacity: 0.5;
-}
-
-.tab-btn.active {
-    opacity: 1;
-    color: var(--primary);
-}
-
-/* Línea naranja bajo el botón activo */
-.tab-btn.active::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: var(--accent);
-}
-
-/* Contenido del horario */
-.tab-content {
-    display: none;
-    animation: fadeIn 0.5s ease;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-.schedule-item {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    padding: 2.5rem 0;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+.program-day-link {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-}
-
-.schedule-item:last-child {
-    border-bottom: none;
-}
-
-/* Columna de la hora */
-.schedule-item .time {
-    font-weight: 800;
+    gap: 5px;
+    min-width: 150px;
+    padding: 1rem 1.5rem;
+    background: #ffffff;
+    border: 1px solid rgba(0, 51, 102, 0.12);
+    border-radius: 8px;
+    text-decoration: none;
     color: var(--primary);
+    transition: all 0.25s ease;
+}
+
+.program-day-link span {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    opacity: 0.65;
+}
+
+.program-day-link strong {
+    font-size: 1.15rem;
+}
+
+.program-day-link:hover {
+    background: var(--primary);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 31, 63, 0.12);
+}
+
+/* DAY SECTION */
+
+.program-day {
+    max-width: 1050px;
+    margin: 0 auto 5rem;
+    scroll-margin-top: 110px;
+}
+
+.program-day-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid rgba(0, 51, 102, 0.1);
+}
+
+.program-day-date {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.program-day-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--primary);
+}
+
+.program-day-month {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent);
+}
+
+.program-day-date h2 {
+    margin: 0.2rem 0 0;
+    font-size: 1.7rem;
+    color: var(--primary-dark);
+}
+
+.program-day-tag {
+    padding: 0.5rem 1rem;
+    background: rgba(0, 51, 102, 0.06);
+    border-radius: 30px;
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* TIMELINE */
+
+.program-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.program-timeline::before {
+    content: "";
+    position: absolute;
+    left: 145px;
+    top: 15px;
+    bottom: 15px;
+    width: 2px;
+    background: rgba(0, 51, 102, 0.1);
+}
+
+.program-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 125px minmax(0, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+.program-time {
+    position: relative;
+    padding-top: 1.5rem;
+    text-align: right;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.program-time::after {
+    content: "";
+    position: absolute;
+    top: 1.75rem;
+    right: -48px;
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.program-item-content {
+    min-width: 0;
+    padding: 1.4rem 1.7rem;
+    background: #ffffff;
+    border: 1px solid rgba(0, 51, 102, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 31, 63, 0.035);
+    transition: box-shadow 0.25s ease;
+}
+
+.program-item-content:hover {
+    box-shadow: 0 7px 22px rgba(0, 31, 63, 0.08);
+}
+
+.program-item-content h3 {
+    margin: 0.4rem 0;
+    color: var(--primary-dark);
+    font-size: 1.12rem;
+    line-height: 1.5;
+}
+
+.program-item-content > p {
+    margin: 0.5rem 0 0;
+    color: var(--text-main);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.program-category {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.program-speaker {
+    font-weight: 600;
+    color: var(--primary) !important;
+    font-size: 1rem !important;
+}
+
+/* PAPER LIST */
+
+.program-paper-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.2rem;
+}
+
+.program-paper {
+    padding: 1rem 0;
+    border-top: 1px solid rgba(0, 51, 102, 0.09);
+}
+
+.program-paper h4 {
+    margin: 0;
+    color: var(--text-main);
+    font-size: 0.96rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.program-paper p {
+    margin: 0.35rem 0 0;
+    color: #687789;
+    font-size: 0.86rem;
+    line-height: 1.6;
+}
+
+/* KEYNOTE */
+
+.program-keynote .program-item-content {
+    background: #f1f6fb;
+    border-left: 4px solid var(--primary);
+}
+
+.program-keynote .program-time::after {
+    border-color: var(--accent);
+}
+
+/* BREAKS */
+
+.program-break .program-item-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: #fafbfc;
+    border-style: dashed;
+    box-shadow: none;
+}
+
+.program-break .program-item-content i {
+    color: var(--accent);
     font-size: 1.1rem;
 }
 
-/* Columna de la actividad */
-.activity h3 {
-    font-size: 1.4rem;
-    color: var(--primary-dark);
-    margin-bottom: 0.3rem;
+.program-break .program-item-content h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
 }
 
-.activity p {
-    color: var(--text-main);
-    opacity: 0.8;
+.program-break .program-time {
+    padding-top: 1rem;
 }
 
-/* Estilos para sesiones especiales (Keynotes) */
-.schedule-item.keynote .activity h3 {
-    color: var(--accent); /* Resaltamos las keynotes */
+.program-break .program-time::after {
+    top: 1.25rem;
+    border-color: #a5b4c3;
 }
 
-/* Animación simple */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+/* ACTIVITIES */
+
+.program-activity .program-item-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.7rem 1rem;
+    background: #fbfaf7;
+    border-left: 4px solid #b18a50;
 }
 
-/* Responsive */
+.program-activity .program-item-content > i {
+    color: #b18a50;
+    font-size: 1.2rem;
+}
+
+.program-activity .program-item-content h3 {
+    width: 100%;
+    margin: 0;
+}
+
+.program-activity .program-time::after {
+    border-color: #b18a50;
+}
+
+/* GENERAL EVENTS */
+
+.program-general .program-item-content {
+    border-left: 4px solid #7189a3;
+}
+
+/* FOOTER NOTE */
+
+.program-footer-note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 1.2rem;
+    background: rgba(0, 51, 102, 0.04);
+    border-radius: 8px;
+    color: var(--primary);
+    text-align: center;
+}
+
+.program-footer-note i {
+    color: var(--accent);
+}
+
+.program-footer-note p {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE */
+
 @media (max-width: 768px) {
-    .program-tabs {
-        flex-wrap: wrap;
-        gap: 0.5rem;
+
+    .program-intro {
+        padding: 0 0.5rem;
     }
-    .tab-btn {
-        padding: 0.8rem;
+
+    .program-day-nav {
+        gap: 0.6rem;
+        margin: 2rem auto 3rem;
+    }
+
+    .program-day-link {
+        min-width: 0;
+        flex: 1;
+        padding: 0.8rem 0.5rem;
+    }
+
+    .program-day-link span {
+        font-size: 0.62rem;
+    }
+
+    .program-day-link strong {
         font-size: 0.95rem;
     }
-    .schedule-item {
+
+    .program-day {
+        margin-bottom: 4rem;
+    }
+
+    .program-day-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .program-day-number {
+        font-size: 2.8rem;
+    }
+
+    .program-day-date h2 {
+        font-size: 1.4rem;
+    }
+
+    .program-timeline {
+        gap: 1.2rem;
+    }
+
+    .program-timeline::before {
+        left: 5px;
+        top: 10px;
+        bottom: 10px;
+    }
+
+    .program-item {
         grid-template-columns: 1fr;
         gap: 0.5rem;
-        padding: 1.5rem 0;
+        padding-left: 25px;
     }
-    .schedule-item .time {
-        color: var(--accent);
+
+    .program-time {
+        text-align: left;
+        padding: 0 0 0 0.2rem;
+        font-size: 0.82rem;
+    }
+
+    .program-time::after {
+        top: 3px;
+        left: -25px;
+        right: auto;
+        width: 10px;
+        height: 10px;
+    }
+
+    .program-item-content {
+        padding: 1.2rem;
+    }
+
+    .program-break .program-time {
+        padding-top: 0;
+    }
+
+    .program-break .program-time::after {
+        top: 3px;
+    }
+
+    .program-item-content h3 {
+        font-size: 1rem;
+    }
+
+    .program-paper h4 {
+        font-size: 0.9rem;
+    }
+
+    .program-paper p {
+        font-size: 0.82rem;
     }
 }
+
+@media (max-width: 420px) {
+
+    .program-day-tag {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.7rem;
+    }
+
+    .program-day-number {
+        font-size: 2.3rem;
+    }
+
+    .program-day-date h2 {
+        font-size: 1.2rem;
+    }
+
+    .program-venue {
+        font-size: 0.8rem;
+    }
+
+    .venue-separator {
+        display: none;
+    }
+
+    .program-item-content {
+        padding: 1rem;
+    }
+}
+
 
 
 
