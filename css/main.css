@@ -2631,6 +2631,7 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 
 
 
+
 /* ==========================================================================
    PÁGINA: PROGRAM
    ========================================================================== */
@@ -2771,6 +2772,8 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
     gap: 1rem;
 }
 
+/* Se conserva la línea que conecta los horarios */
+
 .program-timeline::before {
     content: "";
     position: absolute;
@@ -2800,7 +2803,7 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
     white-space: nowrap;
 }
 
-/* CÍRCULOS DE LA LÍNEA DE TIEMPO: SE CONSERVAN */
+/* CÍRCULOS: se mantienen */
 
 .program-time::after {
     content: "";
@@ -2814,6 +2817,8 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
     border-radius: 50%;
     z-index: 2;
 }
+
+/* PROGRAM CARDS */
 
 .program-item-content {
     position: relative;
@@ -2888,42 +2893,28 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 }
 
 /* ==========================================================================
-   NUEVO DISEÑO DE ACENTOS LATERALES
-   Se reemplazan las franjas sólidas por segmentos verticales separados.
+   NUEVO ACENTO SUPERIOR
+   Reemplaza las antiguas franjas verticales laterales.
    ========================================================================== */
-
-.program-keynote .program-item-content,
-.program-activity .program-item-content,
-.program-general .program-item-content {
-    border-left: 1px solid rgba(0, 51, 102, 0.08);
-}
-
-/* Acento segmentado común */
-
-.program-keynote .program-item-content::before,
-.program-activity .program-item-content::before,
-.program-general .program-item-content::before {
-    content: "";
-    position: absolute;
-    left: 10px;
-    top: 16px;
-    bottom: 16px;
-    width: 4px;
-    border-radius: 10px;
-    background: repeating-linear-gradient(
-        to bottom,
-        var(--program-accent) 0,
-        var(--program-accent) 13px,
-        transparent 13px,
-        transparent 21px
-    );
-}
 
 /* KEYNOTE */
 
 .program-keynote .program-item-content {
-    --program-accent: var(--primary);
     background: #f1f6fb;
+    border-left: 1px solid rgba(0, 51, 102, 0.08);
+}
+
+/* Pequeño acento horizontal */
+
+.program-keynote .program-item-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1.7rem;
+    width: 48px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 0 0 4px 4px;
 }
 
 .program-keynote .program-time::after {
@@ -2965,12 +2956,25 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 /* ACTIVITIES */
 
 .program-activity .program-item-content {
-    --program-accent: #b18a50;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 0.7rem 1rem;
     background: #fbfaf7;
+    border-left: 1px solid rgba(177, 138, 80, 0.15);
+}
+
+/* Acento dorado superior */
+
+.program-activity .program-item-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1.7rem;
+    width: 48px;
+    height: 4px;
+    background: #b18a50;
+    border-radius: 0 0 4px 4px;
 }
 
 .program-activity .program-item-content > i {
@@ -2990,7 +2994,20 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 /* GENERAL EVENTS */
 
 .program-general .program-item-content {
-    --program-accent: #7189a3;
+    border-left: 1px solid rgba(113, 137, 163, 0.15);
+}
+
+/* Acento azul grisáceo superior */
+
+.program-general .program-item-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1.7rem;
+    width: 48px;
+    height: 4px;
+    background: #7189a3;
+    border-radius: 0 0 4px 4px;
 }
 
 /* FOOTER NOTE */
@@ -3096,6 +3113,12 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
         padding: 1.2rem;
     }
 
+    .program-keynote .program-item-content::before,
+    .program-activity .program-item-content::before,
+    .program-general .program-item-content::before {
+        left: 1.2rem;
+    }
+
     .program-break .program-time {
         padding-top: 0;
     }
@@ -3114,17 +3137,6 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 
     .program-paper p {
         font-size: 0.82rem;
-    }
-
-    /* Ajuste del acento segmentado en móvil */
-
-    .program-keynote .program-item-content::before,
-    .program-activity .program-item-content::before,
-    .program-general .program-item-content::before {
-        left: 8px;
-        top: 14px;
-        bottom: 14px;
-        width: 3px;
     }
 }
 
@@ -3154,7 +3166,14 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
     .program-item-content {
         padding: 1rem;
     }
+
+    .program-keynote .program-item-content::before,
+    .program-activity .program-item-content::before,
+    .program-general .program-item-content::before {
+        left: 1rem;
+    }
 }
+
 
 
 
