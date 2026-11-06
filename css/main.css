@@ -2713,39 +2713,24 @@ body header#main-nav ul#nav-links .dropdown-menu li a:active {
 }
 
 /* WELCOME COCKTAIL REMINDER */
-.program-reminder {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin: 1.5rem 0 2.5rem;
-    padding: 1rem 1.3rem;
-    background: #f5f8fc;
-    border-left: 4px solid #1565c0;
-    border-radius: 8px;
-    color: #334155;
+.program-welcome {
+    margin: 0 0 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.program-reminder > i {
-    font-size: 1.4rem;
-    color: #1565c0;
-    flex-shrink: 0;
+.program-welcome .program-time {
+    color: var(--accent-color);
+    font-weight: 700;
 }
 
-.program-reminder p {
-    margin: 0;
-    line-height: 1.6;
-    font-size: .95rem;
+.program-welcome .program-item-content > i {
+    color: var(--accent-color);
+    margin-right: 6px;
 }
 
-.program-reminder strong {
-    color: #0d47a1;
-}
-
-@media (max-width: 600px) {
-    .program-reminder {
-        align-items: flex-start;
-        padding: 1rem;
-    }
+.program-welcome .program-category {
+    color: var(--accent-color);
 }
 
 /* DAY SECTION */
